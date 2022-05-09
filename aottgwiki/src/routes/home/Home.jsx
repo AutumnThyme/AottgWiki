@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <div className="about-section">
           <div className="about-container">
-            <h1>About</h1>
+            <h1>What is this?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eos, placeat magnam ipsum quod incidunt ipsam cupiditate tenetur exercitationem vero excepturi temporibus harum necessitatibus sit ducimus quia assumenda in aut.</p>
           </div>
         </div>
