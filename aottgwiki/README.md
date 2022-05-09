@@ -2,6 +2,28 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Requirements
+
+You will need to install npm to work on this app.
+
+## Getting Started
+
+Clone this repo to your pc and run `npm install` to install all required dependencies.
+
+It is highly recommended that you install the ES7+ React/Redux/React-Native Snippets extension by dsznajder for vs code.
+This allows one to type short-hand to generate boilerplate code.
+
+```ex: rfc - creates a react functional component which is what most of this site will be made out of.```
+
+### Repo Structure
+
+Due to a limit with react, all project names must be lowercase and so I've added a folder called aottgwiki for the actual site.
+
+Project is separated into Components and Routes. These can be found under src/components and src/routes. Each is a react functional component but
+separated for the purpose of identifying reusable code (which should only be put under components).
+
+Assets will be located under public/assets.
+
 ## Available Scripts
 
 In the project directory, you can run:
