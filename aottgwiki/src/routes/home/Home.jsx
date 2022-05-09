@@ -5,10 +5,20 @@ import ReactPlayer from 'react-player';
 const YT_TEST_VIDEO = "https://www.youtube.com/watch?v=rYvQoussA98";
 const LOCAL_TEST_VIDEO = "assets/ClipsOfBunch5.mp4";
 
+const tryRequire = (path) => {
+  try {
+    var result = require(`${path}`);
+    return result;
+  } catch (err) {
+    console.log(`Error loading ${path}\nErr: ${err}`);
+    return null;
+  }
+};
+
 export default function Home() {
   const yt_video_element = <ReactPlayer
     className="react-player"
-    url={LOCAL_TEST_VIDEO}
+    url={YT_TEST_VIDEO}
     controls={false}
     loop={true}
     playing={true}
@@ -21,11 +31,13 @@ export default function Home() {
                                 <source src={LOCAL_TEST_VIDEO} type="video/mp4" />
                               </video>
 
+  const video = tryRequire(LOCAL_TEST_VIDEO) ? local_video_element : yt_video_element;
+
   return (
     <div className="home-container">
         <Navbar tabOpen="Home"/>
         <div className="player-wrapper">
-        {local_video_element}
+        {video}
         </div>
         <div className="about-section">
           <div className="about-container">
