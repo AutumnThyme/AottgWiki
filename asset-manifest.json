@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AottgWiki/static/css/main.4d29443f.css",
-    "main.js": "/AottgWiki/static/js/main.a4f4c443.js",
+    "main.css": "/AottgWiki/static/css/main.6205e8ca.css",
+    "main.js": "/AottgWiki/static/js/main.12419cf8.js",
     "static/js/787.9695f6f6.chunk.js": "/AottgWiki/static/js/787.9695f6f6.chunk.js",
     "index.html": "/AottgWiki/index.html",
-    "main.4d29443f.css.map": "/AottgWiki/static/css/main.4d29443f.css.map",
-    "main.a4f4c443.js.map": "/AottgWiki/static/js/main.a4f4c443.js.map",
+    "main.6205e8ca.css.map": "/AottgWiki/static/css/main.6205e8ca.css.map",
+    "main.12419cf8.js.map": "/AottgWiki/static/js/main.12419cf8.js.map",
     "787.9695f6f6.chunk.js.map": "/AottgWiki/static/js/787.9695f6f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d29443f.css",
-    "static/js/main.a4f4c443.js"
+    "static/css/main.6205e8ca.css",
+    "static/js/main.12419cf8.js"
   ]
 }
