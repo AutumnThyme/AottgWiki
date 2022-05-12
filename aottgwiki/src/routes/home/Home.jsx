@@ -5,15 +5,6 @@ import ReactPlayer from 'react-player';
 const YT_TEST_VIDEO = "https://www.youtube.com/watch?v=rYvQoussA98";
 const LOCAL_TEST_VIDEO = "assets/ClipsOfBunch5.mp4";
 
-const tryRequire = (path) => {
-  try {
-    var result = require(`${path}`);
-    return result;
-  } catch (err) {
-    console.log(`Error loading ${path}\nErr: ${err}`);
-    return null;
-  }
-};
 
 export default function Home() {
   const yt_video_element = <ReactPlayer
@@ -27,17 +18,17 @@ export default function Home() {
     height='1080px'
   />
 
-  const local_video_element = <video class="HeaderSection-video HeaderSection-video--mobile" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" webkit-playsinline="webkit-playsinline" x5-playsinline="x5-playsinline" poster="https://static.playoverwatch.com/img/pages/home/header-video-poster-mobile-0443ef2d5e.jpg" data-js="header-video">
+  const local_video_element = <video class="HeaderSection-video HeaderSection-video--mobile" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" webkit-playsinline="webkit-playsinline" x5-playsinline="x5-playsinline" data-js="header-video">
                                 <source src={LOCAL_TEST_VIDEO} type="video/mp4" />
                               </video>
 
-  const video = tryRequire(LOCAL_TEST_VIDEO) ? local_video_element : yt_video_element;
+  const video = true ? local_video_element : yt_video_element;
 
   return (
     <div className="home-container">
         <Navbar tabOpen="Home"/>
         <div className="player-wrapper">
-        {video}
+            {video}
         </div>
         <div className="about-section">
           <div className="about-container">

@@ -7,14 +7,9 @@ const MODS = [
   "RRC",
   "TLW",
   "RC",
-  "Anarchy",
   "Gaurdian",
-  "Exploration Mod",
-  "idfk",
-  "idfk2",
-  "idfk3",
-  "idfk4",
-  "idfk5"
+  "Anarchy",
+  "Exploration Mod"
 ]
 
 
@@ -30,7 +25,13 @@ export default function Download() {
           <h2>Searched for: {searchValue}</h2>
           <div className="mods-container">
             {
-              MODS.map((e) => (
+              MODS.filter((e) => {
+                return e.toLowerCase().indexOf(searchValue.toLowerCase()) != -1;
+              }).sort((a, b) => {
+                let aIndex = a.toLowerCase().indexOf(searchValue.toLowerCase());
+                let bIndex = b.toLowerCase().indexOf(searchValue.toLowerCase());
+                return aIndex - bIndex;
+              }).map((e) => (
                 e.toLowerCase().includes(searchValue.toLowerCase()) && 
                 <div className="mod-container">
                   <img src="assets/Logo.png" alt={"image for mod " + e} />

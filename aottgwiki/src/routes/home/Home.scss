@@ -3,24 +3,35 @@
 .player-wrapper {
     padding-top: 80px;
     width: 100%;
-    height: 600px;
+    height: 800px;
     overflow: hidden;
 
-    video {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-
-        // Use border radius to fix a bug on chrome @ https://bugs.chromium.org/p/chromium/issues/detail?id=400829#c31
-        -webkit-border-radius: 1px;
-        border-radius: 1px;
-
-        object-fit: cover;
+        video {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+    
+            // Use border radius to fix a bug on chrome @ https://bugs.chromium.org/p/chromium/issues/detail?id=400829#c31
+            -webkit-border-radius: 1px;
+            border-radius: 1px;
+            z-index: 2;
+            object-fit: cover;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            height: inherit;
+            width: 100%;
+            background: $darkBackground; //Change as per your requirement
+            z-index: 3;
+            -webkit-clip-path: polygon(100% 79%, 0% 100%, 100% 100%);
+            clip-path: polygon(100% 79%, 0% 100%, 100% 100%);
+        }
     }
 
     .react-player {
@@ -38,7 +49,6 @@
             transform: none;
         }
     }
-}
 
 .about-section {
     background-color: $darkBackground;
