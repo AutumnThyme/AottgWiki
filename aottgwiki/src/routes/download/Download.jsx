@@ -9,7 +9,7 @@ const MODS = [
   "RC",
   "Gaurdian",
   "Anarchy",
-  "Exploration Mod"
+  "Expedition Mod"
 ]
 
 
@@ -22,7 +22,6 @@ export default function Download() {
         <div className="mod-section">
           <h1>Public Mods</h1>
           <SearchBar value={searchValue} onValueChanged={setSearchValue} />
-          <h2>Searched for: {searchValue}</h2>
           <div className="mods-container">
             {
               MODS.filter((e) => {
@@ -33,10 +32,14 @@ export default function Download() {
                 return aIndex - bIndex;
               }).map((e) => (
                 e.toLowerCase().includes(searchValue.toLowerCase()) && 
-                <div className="mod-container">
-                  <img src="assets/Logo.png" alt={"image for mod " + e} />
+                <div className="mod-container" key={e}>
+                  <div className="image-circle">
+                    <img src="assets/Logo.png" alt={"image for mod " + e} />
+                  </div>
                   <h1>{e}</h1>
-                  <span>See More...</span>
+                  <div className="seemore-container">
+                    <span>See More...</span>
+                  </div>
                 </div>
               ))
             }
