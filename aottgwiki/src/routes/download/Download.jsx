@@ -1,7 +1,8 @@
 import "./Download.scss"
-import Navbar from "../../components/navbar/Navbar";
+import CustomNavbar from "../../components/navbar/Navbar";
 import SearchBar from "../../components/searchbar/SearchBar";
 import { useEffect, useState } from "react";
+import { Grid } from '@mui/material';
 
 const MODS = [
   "RRC",
@@ -18,7 +19,7 @@ export default function Download() {
 
   return (
     <div>
-        <Navbar tabOpen="Download"/>
+        <CustomNavbar tabOpen="Download"/>
         <div className="mod-section">
           <h1>Public Mods</h1>
           <SearchBar value={searchValue} onValueChanged={setSearchValue} />

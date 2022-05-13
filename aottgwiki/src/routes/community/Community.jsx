@@ -1,10 +1,11 @@
 import "./Community.scss"
-import Navbar from "../../components/navbar/Navbar";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import CustomNavbar from "../../components/navbar/Navbar";
 
 export default function Community() {
   return (
     <div>
-        <Navbar tabOpen="Community"/>
+        <CustomNavbar tabOpen="Community"/>
     </div>
   )
 }
