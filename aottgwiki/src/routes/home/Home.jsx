@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
       <CustomNavbar tabOpen="Home"/>
-      <Container >
+      <Container>
         <div className="about-section">
           <div className="about-container">
             <h1>What is this?</h1>
