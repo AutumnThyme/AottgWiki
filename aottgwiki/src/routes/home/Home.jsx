@@ -1,7 +1,7 @@
 import "./Home.scss"
 import CustomNavbar from "../../components/navbar/Navbar";
 import ReactPlayer from 'react-player';
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -21,7 +21,7 @@ export default function Home() {
     height='1080px'
   />
 
-  const local_video_element = <video class="HeaderSection-video HeaderSection-video--mobile" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" webkit-playsinline="webkit-playsinline" x5-playsinline="x5-playsinline" data-js="header-video">
+  const local_video_element = <video className="HeaderSection-video HeaderSection-video--mobile" autoPlay="autoplay" loop="loop" muted="muted" playsInline="playsInline" webkit-playsinline="webkit-playsinline" x5-playsinline="x5-playsinline" data-js="header-video">
                                 <source src={LOCAL_TEST_VIDEO} type="video/mp4" />
                               </video>
 
